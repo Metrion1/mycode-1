@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#This script will prompt a user with the question "What is your name?" and respond with "Hello _____, nice to meet you!"
+#This script will prompt a user with the question "What is your name?" and "what day of the week is it?" respond with "Hello _____, nice to meet you!"
 
 def main():
 
