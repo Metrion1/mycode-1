@@ -1,12 +1,10 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 #"""Just a lil' warmup!""
 
 def main():
     #Prompt the user with two questions.
     name = input("What is your name?\n>")
-    num = input("Pick a number between 1 and 3\n>")
-    num = int(num)
-    num = num - 1
+    num = int(input("Pick a number between 1 and 3\n>"))-1
     
     #Pick an adjective based on user input.
     adj_list = ["stupendous","splendiferous","magnificent"]
