@@ -123,12 +123,12 @@ while True: # move this down below all those prints if you don't want to see the
                         damage = random.randint(1, 6) + player_strength
                         bear_health -= damage
                         print(f"You hit the polar bear for {damage} damage. The beast has {bear_health} health remaining.")
-                    #The player rolls lower than the lemming 
+                    #The player rolls lower than the bear 
                     elif player_roll < bear_roll:
                         damage = random.randint(1, 12) + bear_str
                         player_health -= damage 
                         print(f"The polar bear hits you for {damage} damage. You have no health remaining.")
-                    #The player and the lemming roll the same
+                    #The player and the bear  roll the same
                     elif player_roll == bear_roll:
                         print(f"You and the bear both miss!")
 
