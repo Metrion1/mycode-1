@@ -132,3 +132,35 @@ while True: # move this down below all those prints if you don't want to see the
                     elif player_roll == bear_roll:
                         print(f"You and the bear both miss!")
 
+
+    if prompt == 3:
+        if "yellow snow" not in taken_paths:
+            print("You head West, step after dreary step. Do your eyes deceive you? A puddle of mustard steams in front of you. This would pair excellently with any food in your inventory.")
+
+            while True: # starting an infinite loop
+                #Prompt the user for a choice
+                if player_health <= 0:
+                        print("You have contracted leptospirosis and died from kidney and liver failure")
+                        print("=============\n GAME OVER\n=============")
+                        exit()
+                        break
+                else: 
+
+                    decide= input("What do you do?\n (Eat the mustard) or (Go Back)")
+                    
+                    if decide.lower() == "eat the mustard" and player_food <= 0:
+                        damage = random.randint(1, 12)
+                        player_health -= damage
+                        
+                        print(f"Ew! Gross! That wasn't mustard, that was yellow snow! Your health drops {damage} points and is now at {player_health} points.")
+                    
+                    elif decide.lower() == "eat the mustard" and player_food > 0:
+                        damage = random.randint(1, 4)
+                        player_health -= damage
+                        player_food = player_food -1
+                        print(f"Ew! Gross! That wasn't mustard, that was yellow snow! Your health drops {damage} and you wasted 1 piece of food. You now only have {player_food} pieces of food left")
+                    
+                        #If the user chooses to attack
+                    if decide.lower() != "eat the mustard":
+                            print("You return to the crossroads.")
+                            break
