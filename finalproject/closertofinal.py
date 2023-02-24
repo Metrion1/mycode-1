@@ -8,7 +8,7 @@ def start():
     time.sleep(2)
     answer= input("What are you called? \n >")
     print(f"You start out with {player_strength} strength, {player_health} health, and {player_food} food.")
-    print("------------------------------------------------------")
+    print("----------------------------------------------------------------")
     time.sleep(1)
     return answer
 
@@ -24,9 +24,9 @@ taken_paths = []
 player_name = start() 
 
 print(f"Welcome, {player_name}, to the Frozen Wasteland! Your mission begins now.")
-print("------------------------------------------------------")
+print("----------------------------------------------------------------")
 # First prompt with 5 paths to choose from
-print("You have awaken on the frozen tundra. You can see a golden disc piercing the clouded sky, \n it hurts to keep your eyes open more than a squint.")
+print("You have awaken on the frozen tundra. You can see a golden disc piercing the clouded sky. \n The ground and sky blend together, and the light makes your eyes hurt if you open them more than a squint.")
 
 
 while True: # move this down below all those prints if you don't want to see them every time    
@@ -35,7 +35,6 @@ while True: # move this down below all those prints if you don't want to see the
     print("2. Head towards the South.")
     print("3. Head towards the West.")
     print("4. Head towards the East.")
-    print("5. Stay put.")
 
     # Get user input for the first prompt
     prompt = int(input("Enter the number of your choice: "))
@@ -48,9 +47,9 @@ while True: # move this down below all those prints if you don't want to see the
             while True: # starting an infinite loop
 
                     if lemming_health <= 0:
-                        print("The lemming is dead! You are victorious!")
                         player_food += 10
                         taken_paths.append("lemmings")
+                        print(f"The lemming is dead! You are victorious! You now have {player_food} pieces of food in your inventory.")
                         # add whatever else you want to happen before combat ends here
                         break
 
@@ -140,7 +139,7 @@ while True: # move this down below all those prints if you don't want to see the
             while True: # starting an infinite loop
                 #Prompt the user for a choice
                 if player_health <= 0:
-                        print("You have contracted leptospirosis and died from kidney and liver failure")
+                        print("You have contracted leptospirosis and died from kidney and liver failure.")
                         print("=============\n GAME OVER\n=============")
                         exit()
                         break
@@ -158,7 +157,7 @@ while True: # move this down below all those prints if you don't want to see the
                         damage = random.randint(1, 4)
                         player_health -= damage
                         player_food = player_food -1
-                        print(f"Ew! Gross! That wasn't mustard, that was yellow snow! Your health drops {damage} and you wasted 1 piece of food. You now only have {player_food} pieces of food left")
+                        print(f"Ew! Gross! That wasn't mustard, that was yellow snow! Your health drops {damage} and you wasted 1 piece of food. You now only have {player_food} pieces of food left.")
                     
                         #If the user chooses to attack
                     if decide.lower() != "eat the mustard":
